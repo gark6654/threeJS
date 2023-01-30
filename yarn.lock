@@ -5307,6 +5307,16 @@ textextensions@^5.12.0, textextensions@^5.13.0:
   resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-5.15.0.tgz#4bb3296ad6fc111cf4b39c589dd028d8aaaf7060"
   integrity sha512-MeqZRHLuaGamUXGuVn2ivtU3LA3mLCCIO5kUGoohTCoGmCBg/+8yPhWVX9WSl9telvVd8erftjFk9Fwb2dD6rw==
 
+three.interaction@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/three.interaction/-/three.interaction-0.2.3.tgz#f7947b4e44649a822335b03b1dcc68c659d71c04"
+  integrity sha512-gipj4E9WSASSys3SC5uU8HPmHodTDYmggJqKN5yjl6S2vG966EkGLu67jkXQoyB/yvGx38C72vHwdjICAh+avg==
+
+three.interactive@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/three.interactive/-/three.interactive-1.5.1.tgz#fe29c4c97207504f3286851b9482b6c539c1e131"
+  integrity sha512-d5LnXQcagHvlOurL46yHtgPV5fSlzVaJkyi6ZL0KvnsJ/2rStCcos98XM5QGs1wuQuzJeqqQlVsXHGZGXwrGgA==
+
 three@^0.148.0:
   version "0.148.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.148.0.tgz#b6f62f9c84227f8d51c151bf17b67984ded8e4d7"

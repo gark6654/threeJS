@@ -1,18 +1,18 @@
 import WebGL from 'three/addons/capabilities/WebGL';
-import { createScene } from './js/scene';
+import { App } from './js/App';
 
-import './style.scss';
 import './styles/main.scss';
 
 if (WebGL.isWebGLAvailable()) {
-  const container = document.querySelector('.intro--canvas');
-
-  const scene = createScene(container, 520, 320);
-  scene.animate();
-
+  const container = document.querySelector('#root');
   console.log('WebGL ready to use');
+
+  const app = new App({
+    target: container,
+  });
+
+  app.init();
 } else {
   const warning = WebGL.getWebGLErrorMessage();
-
-  alert(warning);
+  console.error(warning);
 }

@@ -24,6 +24,7 @@
   "dependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "three": "^0.148.0",
+    "three.interactive": "^1.5.1",
     "webpack": "^5.75.0"
   },
   "scripts": {
