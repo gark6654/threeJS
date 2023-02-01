@@ -9,6 +9,9 @@ if (WebGL.isWebGLAvailable()) {
 
   const app = new App({
     target: container,
+    width: window.innerWidth,
+    height: window.innerHeight - 1,
+    renderer: { antialias: true, alpha: true },
   });
 
   app.init();

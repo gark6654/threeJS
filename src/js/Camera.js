@@ -13,7 +13,8 @@ export class Camera {
 
   setPerspectiveCamera() {
     const perspectiveCamera = new PerspectiveCamera(75, this.config.aspect, 0.1, 1000);
-    perspectiveCamera.position.set(1.5, 1.5, 1);
+    perspectiveCamera.position.set(-1, 1, 1);
+    // perspectiveCamera.rotation.set(0, 0, 0);
     perspectiveCamera.lookAt(0, 0, 0);
 
     this.perspectiveInstance = perspectiveCamera;

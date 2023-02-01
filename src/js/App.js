@@ -1,4 +1,3 @@
-import { Table } from './Table';
 import { Scene } from './Scene';
 import { Renderer } from './Renderer';
 import { Camera } from './Camera';
@@ -6,6 +5,7 @@ import { Lights } from './Lights';
 import { Orbits } from './Orbits';
 import { EventManager } from './EventManager';
 import { PostProcessing } from './PostProcessing';
+import { Burger } from './Burger';
 
 export class App {
   static instance;
@@ -30,23 +30,18 @@ export class App {
       return console.error('App is already initialized');
     }
 
-    console.log('App init');
-    const { innerWidth, innerHeight, devicePixelRatio } = window;
-
     this.models = [];
-    this.config.width = innerWidth;
-    this.config.height = innerHeight - 1;
-    this.config.pixelRatio = devicePixelRatio;
+    this.config.pixelRatio = window.devicePixelRatio;
     this.config.aspect = this.config.width / this.config.height;
 
     this.setScene();
     this.setCamera();
     this.setRenderer();
-    this.setPostProcessing();
     this.setOrbits();
     this.setEventManager();
     this.setLights();
-    this.setTable();
+    this.setBurger();
+    this.setPostProcessing();
 
     App.initialized = true;
 
@@ -81,15 +76,21 @@ export class App {
     this.lights = new Lights();
   }
 
-  setTable() {
-    this.table = new Table();
+  setBurger() {
+    this.burger = new Burger();
   }
 
   resize() {
-    this.config.width = innerWidth;
-    this.config.height = innerHeight - 1;
-    this.config.pixelRatio = devicePixelRatio;
+    this.config.pixelRatio = window.devicePixelRatio;
     this.config.aspect = this.config.width / this.config.height;
+
+    if (this.config.width < window.innerWidth) {
+      this.config.width = window.innerWidth;
+    }
+
+    if (this.config.height < window.innerHeight) {
+      this.config.height = window.innerHeight - 1;
+    }
 
     Object.keys(this).forEach(key => {
       const instance = this[key];
