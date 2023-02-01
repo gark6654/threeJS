@@ -5,6 +5,7 @@ import { Camera } from './Camera';
 import { Lights } from './Lights';
 import { Orbits } from './Orbits';
 import { EventManager } from './EventManager';
+import { PostProcessing } from './PostProcessing';
 
 export class App {
   static instance;
@@ -41,6 +42,7 @@ export class App {
     this.setScene();
     this.setCamera();
     this.setRenderer();
+    this.setPostProcessing();
     this.setOrbits();
     this.setEventManager();
     this.setLights();
@@ -65,6 +67,10 @@ export class App {
 
   setOrbits() {
     this.orbits = new Orbits();
+  }
+
+  setPostProcessing() {
+    this.postProcessing = new PostProcessing();
   }
 
   setEventManager() {
